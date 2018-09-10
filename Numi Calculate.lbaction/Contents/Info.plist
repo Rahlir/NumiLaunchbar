@@ -29,5 +29,19 @@
 			<true/>
 		</dict>
 	</dict>
+
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Tadeas Uhlir</string>
+		<key>LBEmail</key>
+		<string>tadeas.uhlir@gmail.com</string>
+		<key>LBSummary</key>
+		<string>Insert expression for Numi calculation and get the result right through the LaunchBar. Numi is much more powerful than the standard LaunchBar calculator.</string>
+		<key>LBArgument</key>
+		<string>Numi expression to be calculated</string>
+		<key>LBRequirements</key>
+		<string>Requires Numi app to be running (possibly in background)</string>
+	</dict>
 </dict>
 </plist>
