@@ -1,8 +1,19 @@
 # Numi Launchbar
 
-Launchbar action for awesome little calculator [Numi](https://numi.io/).
+Launchbar action for awesome little calculator [Numi](https://numi.io/). Inspired by
+[Alfred extension](https://github.com/nikolaeu/Numi-extensions).
+
+## Features
+
+**Version 0.1** (alpha):
+* 	Simple interaction between LaunchBar and Numi
+	* 	Press <space> to enter input when the action is selected in LaunchBar
+	* 	Displays result and the whole expresion
 
 ## Installation
+
+First, make sure that you have selected `Enable Alfred integration` in Numi's
+preferences.
 
 To get the most recent version, clone the repository and cp .lbaction bundle
 into action folder of Launchbar: 
@@ -11,9 +22,10 @@ git clone https://github.com/Rahlir/NumiLaunchbar.git
 cp -r "NumiLaunchbar/Numi Calculate.lbaction" "~/Library/Application Support/LaunchBar/Actions/"
 ```
 
-For simplicity, I added shell script to remove previous version of **Numi Launchbar** and
-to copy the newest version into Launchbar action folder. Just run
-```bash
+For simplicity, I added shell script to remove previous version of **Numi
+Launchbar** and to copy the newest version into Launchbar action folder. Just
+run 
+```bash 
 ./install.sh
 ```
 after cloning/pulling the repository.
