@@ -8,7 +8,7 @@ To get the most recent version, clone the repository and cp .lbaction bundle
 into action folder of Launchbar: 
 ```bash 
 git clone https://github.com/Rahlir/NumiLaunchbar.git 
-cp -r NumiLaunchbar/Numi\ Calculate.lbaction ~/Library/Application\ Support/LaunchBar/Actions/ 
+cp -r "NumiLaunchbar/Numi Calculate.lbaction" "~/Library/Application Support/LaunchBar/Actions/"
 ```
 Or, download the bundle *here* and double click on the bundle to install
 automatically. (currently no download link)
