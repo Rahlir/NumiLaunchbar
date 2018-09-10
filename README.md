@@ -1,6 +1,6 @@
 # Numi Launchbar
 
-Launchbar action for awesome little calculator [Numi](https://numi.io/)
+Launchbar action for awesome little calculator [Numi](https://numi.io/).
 
 ## Installation
 
@@ -10,9 +10,13 @@ into action folder of Launchbar:
 git clone https://github.com/Rahlir/NumiLaunchbar.git 
 cp -r "NumiLaunchbar/Numi Calculate.lbaction" "~/Library/Application Support/LaunchBar/Actions/"
 ```
-Or, download the bundle *here* and double click on the bundle to install
-automatically. (currently no download link)
 
+For simplicity, I added shell script to remove previous version of **Numi Launchbar** and
+to copy the newest version into Launchbar action folder. Just run
+```bash
+./install.sh
+```
+after cloning/pulling the repository.
 
 ## Caveat 
 
