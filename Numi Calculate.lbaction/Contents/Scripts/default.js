@@ -56,5 +56,6 @@ function openNumi(delay) {
 	// This function returns 1 on successful opening of Numi,
 	// 2 when Numi is already opened,
 	// and 3 when Numi could not be opened
-	return 3;
+	var out = LaunchBar.executeAppleScriptFile('open.scpt');
+	return out;
 }
