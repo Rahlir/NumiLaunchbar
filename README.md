@@ -24,7 +24,8 @@ First, make sure that you have selected `Enable Alfred integration` in Numi's
 preferences.
 
 To get the most recent version, clone the repository and run the install script
-which removes an old version of *Numi Calculate* if there is one: 
+which removes an old version of *Numi Calculate* if there is one and installs
+the latest version:
 
 ```bash 
 git clone https://github.com/Rahlir/NumiLaunchbar.git 
