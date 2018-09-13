@@ -40,3 +40,7 @@ after cloning/pulling the repository.
 
 Right now, the action is unsigned. This means that you either have to sign it
 yourself or allow unsigned actions in Launchbar's index.
+
+## Acknowledgment
+
+Icons by Muneer A.Safiah from the Noun Project: [website](https://thenounproject.com/mabusafiah/).

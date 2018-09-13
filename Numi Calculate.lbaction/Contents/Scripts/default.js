@@ -17,10 +17,12 @@ function runWithString(string) {
 	var result;
 	if (response.data != undefined) {
 		result = [{
-			title: response.data
+			title: response.data,
+			icon: 'result.png'
 			}, {
 			title: string + ' = ' + response.data,
-			subtitle: 'EXPR'
+			subtitle: 'EXPR',
+			icon: 'equation.png'
 			}];
 		}
 	else if (response.error != undefined && response.error.includes('Could not connect')) {
@@ -42,10 +44,12 @@ function runWithString(string) {
 	}
 	else {
 		result = [{
-			title: string
+			title: string,
+			icon: 'result.png'
 			}, {
 			title: string + ' = ' + string,
-			subtitle: 'EXPR'
+			subtitle: 'EXPR',
+			icon: 'equation.png'
 			}];
 	}
 
