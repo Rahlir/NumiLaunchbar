@@ -13,7 +13,7 @@ Numi window
 
 **Version 0.1** (alpha):
 * 	Simple interaction between LaunchBar and Numi
-	* 	Press <space> to enter input when the action is selected in LaunchBar
+	* 	Press `space` to enter input when the action is selected in LaunchBar
 	* 	Displays result and the whole expresion
 
 ## Installation
