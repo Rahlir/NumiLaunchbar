@@ -7,8 +7,8 @@ Launchbar action for awesome little calculator [Numi](https://numi.io/). Inspire
 
 **Version 0.2**:
 * When Numi is not running, the *Numi Calculate* action will start Numi in background
-* When *Numi Calculate* action is run without input (pressing <return> instead of
-<space>), Numi is shown in foreground and calculation can be done in a standard
+* When *Numi Calculate* action is run without input (pressing `return` instead of
+`space`), Numi is shown in foreground and calculation can be done in a standard
 Numi window
 
 **Version 0.1** (alpha):
