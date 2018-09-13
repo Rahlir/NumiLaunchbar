@@ -3,6 +3,8 @@
 Launchbar action for awesome little calculator [Numi](https://numi.io/). Inspired by
 [Alfred extension](https://github.com/nikolaeu/Numi-extensions).
 
+![Showcase](https://rahlir.github.io/Assets/showcase.gif)
+
 ## Features
 
 **Version 0.2**:
