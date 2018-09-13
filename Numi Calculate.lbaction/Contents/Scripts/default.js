@@ -4,11 +4,10 @@
 // Default script for the LaunchBar action
 
 const port = 15055
-const delay = .25
+const delayTime = 1.5;
 
 function run(argument) {
-	var openCode = openNumi(delay);
-	LaunchBar.alert('No argument or wrong argument was passed to the action'); 
+	openNumi(true);
 }
 
 function runWithString(string) {
@@ -25,10 +24,11 @@ function runWithString(string) {
 			}];
 		}
 	else if (response.error != undefined && response.error.includes('Could not connect')) {
-		var openCode = openNumi(delay);
+		var openCode = openNumi(false);
 		if (openCode == 1) {
 			return runWithString(string);
 		}
+		
 		else if (openCode == 2) {
 			LaunchBar.alert('Could not connect to Numi'
 										  + '\nCheck that Alfred Extension is allowed in Numi preferences');
@@ -52,10 +52,34 @@ function runWithString(string) {
 	return result;
 }
 
-function openNumi(delay) {
+function openNumi(show) {
 	// This function returns 1 on successful opening of Numi,
 	// 2 when Numi is already opened,
 	// and 3 when Numi could not be opened
-	var out = LaunchBar.executeAppleScriptFile('open.scpt');
-	return out;
+	if (show) {
+		LaunchBar.execute('script.sh', 'openN', 'show');
+	}
+
+	if (isOpen()) {
+		return 2;
+	}
+	else {
+		LaunchBar.execute('script.sh', 'openN', delayTime);
+		if (isOpen()) {
+			return 1;
+		}
+		else {
+			return 3;
+		}
+	}
+}
+
+function isOpen() {
+	var isOpen = LaunchBar.execute('script.sh', 'isOpen');
+	if (isOpen == 1) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
