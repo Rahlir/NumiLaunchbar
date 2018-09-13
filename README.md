@@ -23,20 +23,17 @@ Numi window
 First, make sure that you have selected `Enable Alfred integration` in Numi's
 preferences.
 
-To get the most recent version, clone the repository and cp .lbaction bundle
-into action folder of Launchbar: 
+To get the most recent version, clone the repository and run the install script
+which removes an old version of *Numi Calculate* if there is one: 
+
 ```bash 
 git clone https://github.com/Rahlir/NumiLaunchbar.git 
-cp -r "NumiLaunchbar/Numi Calculate.lbaction" "~/Library/Application Support/LaunchBar/Actions/"
-```
-
-For simplicity, I added shell script to remove previous version of **Numi
-Launchbar** and to copy the newest version into Launchbar action folder. Just
-run 
-```bash 
+cd NumiLaunchbar
 ./install.sh
 ```
-after cloning/pulling the repository.
+
+The install script has to be run every time you pull updates from this
+repository.
 
 ## Caveat 
 
@@ -45,4 +42,5 @@ yourself or allow unsigned actions in Launchbar's index.
 
 ## Acknowledgment
 
-Icons by Muneer A.Safiah from the Noun Project: [website](https://thenounproject.com/mabusafiah/).
+Icons by Muneer A.Safiah from the Noun Project:
+[website](https://thenounproject.com/mabusafiah/).
