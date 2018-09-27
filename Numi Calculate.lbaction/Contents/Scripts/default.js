@@ -4,7 +4,7 @@
 // Default script for the LaunchBar action
 
 const port = 15055
-const delayTime = 1.5;
+const delayTime = 1.5
 
 function run(argument) {
 	openNumi(true);
@@ -18,11 +18,11 @@ function runWithString(string) {
 	if (response.data != undefined) {
 		result = [{
 			title: response.data,
-			icon: 'result.png'
+			icon: 'font-awesome:fa-calculator'
 			}, {
 			title: string + ' = ' + response.data,
 			subtitle: 'EXPR',
-			icon: 'equation.png'
+			icon: 'font-awesome:fa-superscript'
 			}];
 		}
 	else if (response.error != undefined && response.error.includes('Could not connect')) {
@@ -45,14 +45,15 @@ function runWithString(string) {
 	else {
 		result = [{
 			title: string,
-			icon: 'result.png'
+			icon: 'font-awesome:fa-calculator'
 			}, {
 			title: string + ' = ' + string,
 			subtitle: 'EXPR',
-			icon: 'equation.png'
+			icon: 'font-awesome:fa-superscript'
 			}];
 	}
 
+	LaunchBar.debugLog(JSON.stringify(result[0]))
 	return result;
 }
 
