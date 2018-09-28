@@ -13,7 +13,8 @@ deal with different scales and units, do time calculations, and much more. See
 [Numi](https://numi.io/)
 * Live Feedback Enabled: see the result as you type
 * Press `enter` to activate the application - no need to select *Numi.app* in LaunchBar
-* Automatically launches Numi in background if it is not running
+* Automatically launches Numi in background if it is not running and displays the result
+once ready - no interruptions during input
 
 ## Installation
 
