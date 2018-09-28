@@ -4,7 +4,7 @@
 // Default script for the LaunchBar action
 
 const port = 15055
-const delayTime = 1.5
+const maxTime = 5
 
 function run(argument) {
 	openNumi(true);
@@ -24,13 +24,12 @@ function runWithString(string) {
 			subtitle: 'EXPR',
 			icon: 'font-awesome:fa-superscript'
 			}];
-		}
+	}
 	else if (response.error != undefined && response.error.includes('Could not connect')) {
 		var openCode = openNumi(false);
 		if (openCode == 1) {
 			return runWithString(string);
 		}
-		
 		else if (openCode == 2) {
 			LaunchBar.alert('Could not connect to Numi'
 										  + '\nCheck that Alfred Extension is allowed in Numi preferences');
@@ -53,7 +52,13 @@ function runWithString(string) {
 			}];
 	}
 
-	LaunchBar.debugLog(JSON.stringify(result[0]))
+	if (result != undefined) {
+		LaunchBar.debugLog(JSON.stringify(result[0]))
+	}
+	else {
+		LaunchBar.debugLog("RESULT UNDEFINED")
+	}
+
 	return result;
 }
 
@@ -63,14 +68,20 @@ function openNumi(show) {
 	// and 3 when Numi could not be opened
 	if (show) {
 		LaunchBar.execute('script.sh', 'openN', 'show');
+		return 0
 	}
 
 	if (isOpen()) {
-		return 2;
+		if (runningFor() > maxTime) {
+			return 2;
+		} 
+		else {
+			return 1;
+		}
 	}
 	else {
-		LaunchBar.execute('script.sh', 'openN', delayTime);
-		if (isOpen()) {
+		var openCall = LaunchBar.execute('script.sh', 'openN');
+		if (openCall == 1) {
 			return 1;
 		}
 		else {
@@ -87,4 +98,11 @@ function isOpen() {
 	else {
 		return false;
 	}
+}
+
+function runningFor() {
+	var runningForStr = LaunchBar.execute('script.sh', 'runningFor');
+	var time_array = runningForStr.split(':')
+	var seconds = time_array[time_array.length]
+	return parseFloat(seconds)
 }

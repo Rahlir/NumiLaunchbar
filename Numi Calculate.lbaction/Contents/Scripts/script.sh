@@ -1,19 +1,22 @@
 #!/bin/bash
-isOpen() {
-	lines=$(ps -A | grep -c Numi.app)
-	if [ $lines -gt 1 ]; then
-		echo 1
-	else
+runningFor() {
+	pid=$(pgrep Numi || echo 0)
+	if [ $pid -eq 0 ]; then
 		echo 0
+	else
+		ps -p $pid -o etime=
 	fi
+}
+
+isOpen() {
+	pgrep -q Numi && echo 1 || echo 0
 }
 
 openN() {
 	if [ "$1" = "show" ]; then
 		open -a Numi
 	else
-		open -j -a Numi
-		sleep "$1"
+		open -j -a Numi && echo 1 || echo 2
 	fi
 }
 

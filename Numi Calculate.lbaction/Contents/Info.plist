@@ -8,12 +8,14 @@
 	<key>CFBundleName</key>
 	<string>Numi Calculate</string>
 	<key>CFBundleVersion</key>
-	<string>0.2</string>
+	<string>0.9</string>
 	<key>CFBundleIconFile</key>
 	<string>com.nikolaeu.numi-setapp</string>
 
 	<key>LBRequiredApplication</key>
 	<string>com.nikolaeu.numi-setapp</string>
+	<key>LBDebugLogEnabled</key>
+	<false/>
 
 	<key>LBScripts</key>
 	<dict>
@@ -26,6 +28,8 @@
 				<string>string</string>
 			</array>
 			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBLiveFeedbackEnabled</key>
 			<true/>
 		</dict>
 	</dict>
@@ -41,7 +45,7 @@
 		<key>LBArgument</key>
 		<string>Numi expression to be calculated</string>
 		<key>LBRequirements</key>
-		<string>Requires Numi app to be running (possibly in background)</string>
+		<string>Requires Numi app to be installed</string>
 	</dict>
 </dict>
 </plist>
