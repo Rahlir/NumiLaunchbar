@@ -10,10 +10,10 @@
 	<key>CFBundleVersion</key>
 	<string>0.9</string>
 	<key>CFBundleIconFile</key>
-	<string>com.nikolaeu.numi-setapp</string>
+	<string>com.nikolaeu.numi</string>
 
 	<key>LBRequiredApplication</key>
-	<string>com.nikolaeu.numi-setapp</string>
+	<string>com.nikolaeu.numi</string>
 	<key>LBDebugLogEnabled</key>
 	<false/>
 
