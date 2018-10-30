@@ -32,5 +32,5 @@ printf "\n${bold}Installing new version:${normal}\n"
 cp -vr Numi\ Calculate.lbaction ~/Library/Application\ Support/LaunchBar/Actions/
 
 if [ "$version" == "setapp" ]; then
-	sed -i '' 's/com.nikolaeu.numi</com.nikolaeu.numi-setapp</g' "$HOME/Library/Application Support/Launchbar/Actions/Numi Calculate.lbaction/Contents/Info.plist"
+	sed -i '' 's/com.dmitrynikolaev.numi</com.nikolaeu.numi-setapp</g' "$HOME/Library/Application Support/Launchbar/Actions/Numi Calculate.lbaction/Contents/Info.plist"
 fi
