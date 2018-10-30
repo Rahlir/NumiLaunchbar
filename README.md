@@ -31,6 +31,14 @@ cd NumiLaunchbar
 ./install.sh
 ```
 
+The install script has an option `-S` that has to be used if your Numi
+application is downloaded through Setapp. Hence, for Setapp Numi versions, use:
+
+```bash
+cd NumiLaunchbar
+./install.sh -S
+```
+
 The install script has to be run every time you pull updates from this
 repository.
 
